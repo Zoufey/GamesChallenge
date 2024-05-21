@@ -1,6 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://due5loyxg6644"]
+[gd_scene load_steps=5 format=3 uid="uid://due5loyxg6644"]
 
 [ext_resource type="Script" path="res://Scripts/score.gd" id="1_f7npn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ntahr"]
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_5sb3p"]
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_i6fhm"]
+font_size = 32
 
 [node name="Score" type="Control"]
 layout_mode = 3
@@ -10,3 +19,40 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_f7npn")
+
+[node name="ScoreboardPlayer1" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -161.0
+offset_top = 17.0
+offset_right = -25.0
+offset_bottom = 82.0
+grow_horizontal = 2
+text = "999999"
+label_settings = SubResource("LabelSettings_ntahr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScoreboardPlayer2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 623.0
+offset_top = 17.0
+offset_right = 737.0
+offset_bottom = 82.0
+text = "999999"
+label_settings = SubResource("LabelSettings_5sb3p")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="-" type="Label" parent="."]
+layout_mode = 0
+offset_left = 529.0
+offset_top = 29.0
+offset_right = 632.0
+offset_bottom = 76.0
+text = "-"
+label_settings = SubResource("LabelSettings_i6fhm")
+horizontal_alignment = 1
+vertical_alignment = 1
