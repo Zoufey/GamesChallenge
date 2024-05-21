@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://dabinxh0n723g"]
+
+[ext_resource type="Texture2D" uid="uid://ba5bem2sufw2d" path="res://Assets/Background.png" id="1_2c4p7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0v6pd"]
+size = Vector2(1445, 19)
+
+[node name="background" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1155.0
+offset_bottom = 650.0
+texture = ExtResource("1_2c4p7")
+
+[node name="CollisionShapes" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionShapes"]
+position = Vector2(568.5, 105.5)
+shape = SubResource("RectangleShape2D_0v6pd")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CollisionShapes"]
+position = Vector2(577, 616)
+shape = SubResource("RectangleShape2D_0v6pd")
